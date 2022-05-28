@@ -1,3 +1,10 @@
+HICE GIT REMOTE
+no paso nada si jhay problemas ver para que era ese comando
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,6 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import ItemList from '../Components/ItemList/ItemList';
+import GlobalContextProvider, { GlobalContext } from '../Context/GlobalContextProvider';
+
+
+
+
+
 
 const Shop = () => {
+
+    const {dataProds} = useContext(GlobalContext);
+
+    console.log(dataProds)
+
   return (
     <>
     
@@ -88,7 +100,11 @@ const Shop = () => {
                 <div className="row">
 
 {/* A PARTIR DE ACA VIENEN LOS ITEMS */}
-                    <div className="col-md-4">
+                    
+                    
+                    <ItemList data={dataProds}/>
+                    
+                    {/* <div className="col-md-4">
                         <div className="card mb-4 product-wap rounded-0">
                             <div className="card rounded-0">
                                 <img className="card-img rounded-0 img-fluid" src="assets/img/nuevas/item-quesoAzul.jpg"/>
@@ -424,7 +440,7 @@ const Shop = () => {
                                 <p className="text-center mb-0">$250.00</p>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
 
 {/* hasta aca los items */}

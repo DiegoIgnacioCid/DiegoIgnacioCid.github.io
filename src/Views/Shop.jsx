@@ -86,10 +86,12 @@ const Shop = () => {
 
 
                 <div className="row">
+
+{/* A PARTIR DE ACA VIENEN LOS ITEMS */}
                     <div className="col-md-4">
                         <div className="card mb-4 product-wap rounded-0">
                             <div className="card rounded-0">
-                                <img className="card-img rounded-0 img-fluid" src="assets/img/shop_01.jpg"/>
+                                <img className="card-img rounded-0 img-fluid" src="assets/img/nuevas/item-quesoAzul.jpg"/>
                                 <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul className="list-unstyled">
                                         <li><a className="btn btn-success text-white" href="shop-single.html"><i className="far fa-heart"></i></a></li>
@@ -123,10 +125,14 @@ const Shop = () => {
                             </div>
                         </div>
                     </div>
+
+
+
+
                     <div className="col-md-4">
                         <div className="card mb-4 product-wap rounded-0">
                             <div className="card rounded-0">
-                                <img className="card-img rounded-0 img-fluid" src="assets/img/shop_02.jpg"/>
+                                <img className="card-img rounded-0 img-fluid" src="https://i.ibb.co/mcpYx7m/item-queso-Azul2.jpg" alt="item-queso-Azul2" border="0"/>
                                 <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul className="list-unstyled">
                                         <li><a className="btn btn-success text-white" href="shop-single.html"><i className="far fa-heart"></i></a></li>
@@ -419,6 +425,11 @@ const Shop = () => {
                             </div>
                         </div>
                     </div>
+
+
+{/* hasta aca los items */}
+
+
                 </div>
                 <div div="row">
                     <ul className="pagination pagination-lg justify-content-end">
@@ -433,6 +444,10 @@ const Shop = () => {
                         </li>
                     </ul>
                 </div>
+
+
+
+
             </div>
 
         </div>

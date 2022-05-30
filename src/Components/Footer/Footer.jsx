@@ -1,4 +1,6 @@
 import React from 'react'
+import "./Footer.css"
+
 
 const Footer = () => {
   return (
@@ -9,7 +11,7 @@ const Footer = () => {
             <div className="row">
 
                 <div className="col-md-4 pt-5">
-                    <h2 className="h2 text-success border-bottom pb-3 border-light logo">Käse</h2>
+                    <h2 className="h2 text-success border-bottom pb-3 border-light logo kaseColor">Käse</h2>
                     <ul className="list-unstyled text-light footer-link-list">
                         <li>
                             <i className="fas fa-map-marker-alt fa-fw"></i>

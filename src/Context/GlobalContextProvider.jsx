@@ -70,9 +70,9 @@ const GlobalContextProvider = ({children}) => {
           precio: precio, 
           precioTotal: (precio * cantidad)
         }
-       /*  console.log(nuevoObj); */
+        console.log(nuevoObj);
         setCart([... cart, nuevoObj]); 
-        /* console.log("Nuevo estado del carrito (if):", cart); */
+        console.log("Nuevo estado del carrito (if):", cart);
 
       } else {
         const cantNueva = cart[isInCart(producto)].cantidad + cantidad;

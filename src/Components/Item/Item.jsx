@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Item = (data) => {
 
-    console.log("item data ", data)
+   /*  console.log("item data ", data) */
   return (
     <>
     <div className="col-md-4">
@@ -18,15 +19,11 @@ const Item = (data) => {
                                 </div>
                             </div>
                             <div className="card-body">
-                                <a href="shop-single.html" className="h3 text-decoration-none">{data.prods.id}</a>
+                                <Link to={`/ShopDetail/${data.prods.id}`} className="h3 text-decoration-none">{data.prods.id}</Link>
                                 <ul className="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                    <li>M/L/X/XL</li>
+                                    <li>{data.prods.Text}</li>
                                     <li className="pt-2">
-                                        <span className="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                        <span className="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                        <span className="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                        <span className="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                        <span className="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                       
                                     </li>
                                 </ul>
                                 <ul className="list-unstyled d-flex justify-content-center mb-1">
@@ -34,7 +31,7 @@ const Item = (data) => {
                                         <i className="text-warning fa fa-star"></i>
                                         <i className="text-warning fa fa-star"></i>
                                         <i className="text-warning fa fa-star"></i>
-                                        <i className="text-muted fa fa-star"></i>
+                                        <i className="text-warning fa fa-star"></i>
                                         <i className="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>

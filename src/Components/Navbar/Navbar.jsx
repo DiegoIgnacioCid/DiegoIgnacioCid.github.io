@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import "./Navbar.css"
 
 const Navbar = () => {
   return (
@@ -31,7 +32,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light shadow">
         <div className="container d-flex justify-content-between align-items-center">
 
-            <NavLink to={"/"} className="navbar-brand text-success logo h1 align-self-center">
+            <NavLink to={"/"} className="navbar-brand text-success logo h1 align-self-center" id='logo'>
                 Käse
             </NavLink>
 

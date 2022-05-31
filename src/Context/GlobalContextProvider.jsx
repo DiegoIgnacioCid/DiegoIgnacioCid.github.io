@@ -14,8 +14,11 @@ const GlobalContextProvider = ({children}) => {
   // sirve para llevar la cuenta del total de la compra
   let total = 0;
   const contadorTotal = () => {
+
     cart.map(x => total += x.precioTotal);
+    
     /* console.log("total en cartContext", total); */
+
     setcartTotal(total);
   }
  
@@ -61,12 +64,13 @@ const GlobalContextProvider = ({children}) => {
  
  
 
-  const addToCart= (producto, cantidad, precio) => {
+  const addToCart= (producto, cantidad, precio, stock) => {
       console.log("producto en GlobalContext: ", producto);
       if (isInCart(producto) == -1) {
         const nuevoObj = {
           id: producto,
           cantidad: cantidad,
+          stock: stock,
           precio: precio, 
           precioTotal: (precio * cantidad)
         }

@@ -5,7 +5,7 @@ import GlobalContextProvider, { GlobalContext } from '../../Context/GlobalContex
 const CartItem = (data) => {
 
     
-    const {eliminarProd} = useContext(GlobalContext);
+    const {eliminarProd, addToCart} = useContext(GlobalContext);
     
     
     data = data.prods;
@@ -15,6 +15,19 @@ const CartItem = (data) => {
 const handleClick = () => {
     eliminarProd(data.id);
 }
+
+
+const handleClickSuma = () => {
+    if (data.cantidad < data.stock) {
+        addToCart(data.id, 1, data.precio, data.stock);
+    }
+    
+    
+}
+
+
+
+
 
   return (
     
@@ -31,7 +44,7 @@ const handleClick = () => {
             </div>
             <input type="text" className="form-control form-control-sm bg-secondary text-center" value={data.cantidad}/>
             <div className="input-group-btn">
-                <button className="btn btn-sm btn-primary btn-plus">
+                <button onClick={handleClickSuma} className="btn btn-sm btn-primary btn-plus">
                     <i className="fa fa-plus"></i>
                 </button>
             </div>

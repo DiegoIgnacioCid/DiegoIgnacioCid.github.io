@@ -56,7 +56,7 @@ const ItemCount = ({prod}) => {
 
     const handleAgregarCarrito = () => {
         setDisable(true);
-        addToCart(prod.id, contador, prod.Precio);
+        addToCart(prod.id, contador, prod.Precio, prod.Stock);
     }
     
 

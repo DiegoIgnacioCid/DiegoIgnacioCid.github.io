@@ -30,13 +30,13 @@ const GlobalContextProvider = ({children}) => {
     let copiaArray = cart;
     const indexProd = copiaArray.findIndex(x => x.id === producto);
     /* console.log("cart", cart); */
-    cart.map(x => console.log(x));
-    /* console.log("producto", producto);
+    /* cart.map(x => console.log(x)); */
+    /* console.log("producto", producto);*/
     console.log("indexprod", indexProd);
-    console.log("copiaArray", copiaArray); */
-    copiaArray.splice(indexProd);
-    /* console.log("copiaArray",  copiaArray);
-    console.log("nuevo cart", cart); */
+    console.log("copiaArray", copiaArray); 
+    copiaArray.splice(indexProd, 1);
+    console.log("copiaArray",  copiaArray);
+    console.log("nuevo cart", cart); 
     setCart(copiaArray);
     contadorTotal(); 
     contadorCantTotal();

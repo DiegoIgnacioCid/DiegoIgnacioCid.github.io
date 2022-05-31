@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { NavLink } from 'react-router-dom';
 import ItemList from '../Components/ItemList/ItemList';
 import GlobalContextProvider, { GlobalContext } from '../Context/GlobalContextProvider';
 
@@ -24,30 +25,30 @@ const Shop = () => {
                 <h1 className="h2 pb-4">Categorías</h1>
                 <ul className="list-unstyled templatemo-accordion">
                     <li className="pb-3">
-                        <a className="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
+                        <NavLink to={"/Shop"}  className="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
                             Todos nuestros quesos
                             <i className="fa fa-fw fa-chevron-circle-right mt-1"></i>
-                        </a>
+                        </NavLink>
                         {/* <ul className="collapse show list-unstyled pl-3">
                             <li><a className="text-decoration-none" href="#">Men</a></li>
                             <li><a className="text-decoration-none" href="#">Women</a></li>
                         </ul> */}
                     </li>
                     <li className="pb-3">
-                        <a className="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
+                        <NavLink to={"/Categoria/Estacionados"}  className="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
                             Estacionados
-                            <i className="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
-                        </a>
+                            <i className="pull-right fa fa-fw fa-chevron-circle-right mt-1"></i>
+                        </NavLink>
                         {/* <ul id="collapseTwo" className="collapse list-unstyled pl-3">
                             <li><a className="text-decoration-none" href="#">Sport</a></li>
                             <li><a className="text-decoration-none" href="#">Luxury</a></li>
                         </ul> */}
                     </li>
                     <li className="pb-3">
-                        <a className="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
+                        <NavLink to={"/Categoria/Semiduros"}  className="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
                             Semiduros
-                            <i className="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
-                        </a>
+                            <i className="pull-right fa fa-fw fa-chevron-circle-right mt-1"></i>
+                        </NavLink>
                         {/* <ul id="collapseThree" className="collapse list-unstyled pl-3">
                             <li><a className="text-decoration-none" href="#">Bag</a></li>
                             <li><a className="text-decoration-none" href="#">Sweather</a></li>
@@ -55,10 +56,10 @@ const Shop = () => {
                         </ul> */}
                     </li>
                     <li className="pb-3">
-                        <a className="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Otros
-                            <i className="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
-                        </a>
+                        <NavLink to={"/Categoria/Blandos"}  className="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
+                            Blandos
+                            <i className="pull-right fa fa-fw fa-chevron-circle-right mt-1"></i>
+                        </NavLink>
                         {/* <ul id="collapseThree" className="collapse list-unstyled pl-3">
                             <li><a className="text-decoration-none" href="#">Bag</a></li>
                             <li><a className="text-decoration-none" href="#">Sweather</a></li>

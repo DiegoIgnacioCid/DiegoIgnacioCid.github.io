@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import CartItemList from '../Components/CartItemList/CartItemList';
 import GlobalContextProvider, { GlobalContext } from '../Context/GlobalContextProvider';
 
 
@@ -41,8 +42,8 @@ const Cart = () => {
                     </thead>
                     <tbody className="align-middle">
 
-
-                        <tr>
+                    <CartItemList data={{cart}}/>
+                        {/* <tr>
                             <td className="align-middle"><img src="img/product-1.jpg" alt="" style={{width: "50px;"}}/> Colorful Stylish Shirt</td>
                             <td className="align-middle">$150</td>
                             <td className="align-middle">
@@ -149,7 +150,7 @@ const Cart = () => {
                             </td>
                             <td className="align-middle">$150</td>
                             <td className="align-middle"><button className="btn btn-sm btn-primary"><i className="fa fa-times"></i></button></td>
-                        </tr>
+                        </tr> */}
                     </tbody>
                 </table>
             </div>

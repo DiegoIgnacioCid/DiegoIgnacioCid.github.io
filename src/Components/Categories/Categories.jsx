@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Categories = () => {
   return (
@@ -16,19 +17,19 @@ const Categories = () => {
         </div>
         <div className="row">
             <div className="col-12 col-md-4 p-5 mt-3">
-                <a href="#"><img src="./assets/img/nuevas/categorias-estacionado.png" className="rounded-circle img-fluid border"/></a>
+                <NavLink to={"/Categoria/Estacionados"}><img src="./assets/img/nuevas/categorias-estacionado.png" className="rounded-circle img-fluid border"/></NavLink>
                 <h5 className="text-center mt-3 mb-3">Estacionados</h5>
-                <p className="text-center"><a className="btn btn-success">Tienda</a></p>
+                <p className="text-center"><NavLink to={"/Categoria/Estacionados"} className="btn btn-success">Tienda</NavLink></p>
             </div>
             <div className="col-12 col-md-4 p-5 mt-3">
-                <a href="#"><img src="./assets/img/nuevas/categorias-semiduros.png" className="rounded-circle img-fluid border"/></a>
+                <NavLink to={"/Categoria/Semiduros"}><img src="./assets/img/nuevas/categorias-semiduros.png" className="rounded-circle img-fluid border"/></NavLink>
                 <h2 className="h5 text-center mt-3 mb-3">Semiduros</h2>
-                <p className="text-center"><a className="btn btn-success">Tienda</a></p>
+                <p className="text-center"><NavLink to={"/Categoria/Semiduros"} className="btn btn-success">Tienda</NavLink></p>
             </div>
             <div className="col-12 col-md-4 p-5 mt-3">
                 <a href="#"><img src="./assets/img/nuevas/categorias-blandos.jpg" className="rounded-circle img-fluid border"/></a>
                 <h2 className="h5 text-center mt-3 mb-3">Blandos</h2>
-                <p className="text-center"><a className="btn btn-success">Tienda</a></p>
+                <p className="text-center"><NavLink to={"/Categoria/Blandos"} className="btn btn-success">Tienda</NavLink></p>
             </div>
         </div>
     </section>

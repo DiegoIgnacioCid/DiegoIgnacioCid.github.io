@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import GlobalContextProvider, { GlobalContext } from '../../Context/GlobalContextProvider';
 
@@ -6,11 +6,33 @@ import GlobalContextProvider, { GlobalContext } from '../../Context/GlobalContex
 const ItemCount = ({prod}) => {
 
 
+    const {cart, addToCart} = useContext(GlobalContext);
 
-    const [contador, setContador] = useState(0);
+    
+
+    const isInCart = (producto) => {
+        return cart.findIndex(x => x.id === producto); 
+     }
+     
+    let contInicial = 0; 
+
+    if (isInCart(prod.id) == -1) {
+        contInicial = 0; 
+
+      } else {
+        contInicial = cart[isInCart(prod.id)].cantidad;
+
+      }
+
+    const [contador, setContador] = useState(contInicial);
+    
+    
+
     const [disable, setDisable] = useState(false);
 
-    const {cart, addToCart} = useContext(GlobalContext);
+    console.log("cart en Itemcount: ", cart);
+    console.log("prod en Itemcount: ", prod);
+
 
     const stock = prod.Stock;
     console.log(prod);

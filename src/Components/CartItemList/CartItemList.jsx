@@ -4,8 +4,8 @@ import CartItem from '../CartItem/CartItem'
 const CartItemList = (data) => {
    
     const datos = data.data.cart;
-    console.log(datos);
-    console.log(datos.length);
+/*     console.log(datos);
+    console.log(datos.length); */
    
   return (
       <>

@@ -80,8 +80,10 @@ const GlobalContextProvider = ({children}) => {
 
       } else {
         const cantNueva = cart[isInCart(producto)].cantidad + cantidad;
+        const precioTotNuevo = cart[isInCart(producto)].precioTotal + (precio * cantidad);
         const newArray = [...cart];
         newArray[isInCart(producto)].cantidad = cantNueva;
+        newArray[isInCart(producto)].precioTotal = precioTotNuevo;
         /* console.log(newArray); */
         setCart(newArray); 
         /* console.log("Nuevo estado del carrito (else):", cart); */

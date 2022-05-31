@@ -5,12 +5,12 @@ import GlobalContextProvider, { GlobalContext } from '../../Context/GlobalContex
 const CartItem = (data) => {
 
     
-    const {eliminarProd, addToCart} = useContext(GlobalContext);
+    const {eliminarProd, addToCart, cart, cartTotal} = useContext(GlobalContext);
     
     
     data = data.prods;
-    console.log("data en cartItem: ", data)
-    console.log("data.id en cartItem: ", data.id)
+    /* console.log("data en cartItem: ", data)
+    console.log("data.id en cartItem: ", data.id) */
 
 const handleClick = () => {
     eliminarProd(data.id);
@@ -19,7 +19,17 @@ const handleClick = () => {
 
 const handleClickSuma = () => {
     if (data.cantidad < data.stock) {
+        console.log(cart);
+        console.log(cartTotal);
         addToCart(data.id, 1, data.precio, data.stock);
+    }
+    
+    
+}
+
+const handleClickResta = () => {
+    if (data.cantidad > 0) {
+        addToCart(data.id, -1, data.precio, data.stock);
     }
     
     
@@ -38,7 +48,7 @@ const handleClickSuma = () => {
     <td className="align-middle">
         <div className="input-group quantity mx-auto" style={{width: "100px;"}}>
             <div className="input-group-btn">
-                <button className="btn btn-sm btn-primary btn-minus" >
+                <button onClick={handleClickResta} className="btn btn-sm btn-primary btn-minus" >
                 <i className="fa fa-minus"></i>
                 </button>
             </div>

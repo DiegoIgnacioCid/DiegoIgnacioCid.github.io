@@ -1,11 +1,12 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import CartItemList from '../Components/CartItemList/CartItemList';
 import GlobalContextProvider, { GlobalContext } from '../Context/GlobalContextProvider';
 
 
 const Cart = () => {
-
     const {cart, addToCart, cartTotal, cantidadTotal, clear} = useContext(GlobalContext);
+
+   
 
 
   return (

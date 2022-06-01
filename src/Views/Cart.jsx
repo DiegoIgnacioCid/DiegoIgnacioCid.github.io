@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import CartItemList from '../Components/CartItemList/CartItemList';
+import Formulario from '../Components/Formulario/Formulario';
 import GlobalContextProvider, { GlobalContext } from '../Context/GlobalContextProvider';
 
 
@@ -80,6 +81,7 @@ const Cart = () => {
                             <h5 className="font-weight-bold">Total:</h5>
                             <h5 className="font-weight-bold">$ {cartTotal}.-</h5>
                         </div>
+                        <Formulario cart={{cart}} cantTotal={{cartTotal}} compra={{cantidadTotal}}/>
                         <button className="btn btn-block btn-primary my-3 py-3">Terminar mi compra</button>
                     </div>
                 </div>

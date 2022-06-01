@@ -52,7 +52,7 @@ const handleClickResta = () => {
                 <i className="fa fa-minus"></i>
                 </button>
             </div>
-            <input type="text" className="form-control form-control-sm bg-secondary text-center" value={data.cantidad}/>
+            <input type="text" className="form-control form-control-sm bg-primary text-center" value={data.cantidad}/>
             <div className="input-group-btn">
                 <button onClick={handleClickSuma} className="btn btn-sm btn-primary btn-plus">
                     <i className="fa fa-plus"></i>

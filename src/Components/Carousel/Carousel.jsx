@@ -1,6 +1,8 @@
 import React from 'react'
 import "./Carousel.css"
 import img1 from "../../Assets/img/nuevas/carouselN2.png"
+import img2 from "../../Assets/img/nuevas/carouselN3-2.png"
+import img3 from "../../Assets/img/nuevas/carouselN1.png"
 
 
 const Carousel = () => {
@@ -35,7 +37,7 @@ const Carousel = () => {
                 <div className="container">
                     <div className="row p-5">
                         <div className="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img className="img-fluid" src="./assets/img/nuevas/carouselN3-2.png" alt=""/>
+                            <img className="img-fluid" src={img2} alt=""/>
                         </div>
                         <div className="col-lg-6 mb-0 d-flex align-items-center">
                             <div className="text-align-left">
@@ -54,7 +56,7 @@ const Carousel = () => {
                 <div className="container">
                     <div className="row p-5">
                         <div className="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img className="img-fluid" src="./assets/img/nuevas/carouselN1.png" alt=""/>
+                            <img className="img-fluid" src={img3} alt=""/>
                         </div>
                         <div className="col-lg-6 mb-0 d-flex align-items-center">
                             <div className="text-align-left">

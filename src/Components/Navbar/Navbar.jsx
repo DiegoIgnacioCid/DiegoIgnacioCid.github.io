@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import GlobalContextProvider, { GlobalContext } from '../../Context/GlobalContextProvider';
 import "./Navbar.css"
 import "../../Assets/css/bootstrap.min.css"
+import "../../Assets/css/templatemo.css"
 
 const Navbar = () => {
 

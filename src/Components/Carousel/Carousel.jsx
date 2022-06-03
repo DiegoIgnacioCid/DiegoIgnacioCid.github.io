@@ -1,5 +1,7 @@
 import React from 'react'
 import "./Carousel.css"
+import img1 from "../../Assets/img/nuevas/carouselN2.png"
+
 
 const Carousel = () => {
   return (
@@ -16,7 +18,7 @@ const Carousel = () => {
                 <div className="container">
                     <div className="row p-5">
                         <div className="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img className="img-fluid" src="./assets/img/nuevas/carouselN2.png" alt=""/>
+                            <img className="img-fluid" src={img1} alt=""/>
                         </div>
                         <div className="col-lg-6 mb-0 d-flex align-items-center">
                             <div className="text-align-left align-self-center">

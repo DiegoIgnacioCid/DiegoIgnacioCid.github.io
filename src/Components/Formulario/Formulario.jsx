@@ -20,8 +20,8 @@ const Formulario = ({cantTotal, compra, cart}) => {
           apellido: "",
           telefono: "",
       },
-      total: cantTotal.cartTotal,
-      items: compra.cantidadTotal,
+     /*  total: cantTotal.cartTotal,
+      items: compra.cantidadTotal, */
       purchase: {...cart.cart}
   });
   

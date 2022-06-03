@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import "./Footer.css"
 
 
@@ -31,9 +32,9 @@ const Footer = () => {
                 <div className="col-md-4 pt-5">
                     <h2 className="h2 text-light border-bottom pb-3 border-light">Productos</h2>
                     <ul className="list-unstyled text-light footer-link-list">
-                        <li><a className="text-decoration-none" href="#">Estacionados</a></li>
-                        <li><a className="text-decoration-none" href="#">Semiduros</a></li>
-                        <li><a className="text-decoration-none" href="#">Otros</a></li>
+                        <li><NavLink to={"/Categoria/Estacionados"}  className="text-decoration-none" href="#">Estacionados</NavLink></li>
+                        <li><NavLink to={"/Categoria/Semiduros"}  className="text-decoration-none" href="#">Semiduros</NavLink></li>
+                        <li><NavLink to={"/Categoria/Blandos"}  className="text-decoration-none" href="#">Blandos</NavLink></li>
                         {/* <li><a className="text-decoration-none" href="#">Women's Shoes</a></li>
                         <li><a className="text-decoration-none" href="#">Popular Dress</a></li>
                         <li><a className="text-decoration-none" href="#">Gym Accessories</a></li>

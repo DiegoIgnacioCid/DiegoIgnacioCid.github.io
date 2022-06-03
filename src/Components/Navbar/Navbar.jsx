@@ -4,6 +4,7 @@ import GlobalContextProvider, { GlobalContext } from '../../Context/GlobalContex
 import "./Navbar.css"
 import "../../Assets/css/bootstrap.min.css"
 import "../../Assets/css/templatemo.css"
+import "../../Assets/css/templatemo.min.css"
 
 const Navbar = () => {
 

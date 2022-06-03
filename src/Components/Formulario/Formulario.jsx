@@ -1,17 +1,21 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import useFirebase from '../../Hooks/useFirebase';
 import "./Formulario.css"
 import { addDoc, collection } from 'firebase/firestore'
 import Swal from 'sweetalert2'
+import GlobalContextProvider, { GlobalContext } from '../../Context/GlobalContextProvider';
+
 
 import db from '../../Service/Firebase'
 
 const Formulario = ({cantTotal, compra, cart}) => {
+
+  const {cartTotal, cantidadTotal} = useContext(GlobalContext);
   
   /* console.log(cantTotal, compra); */
   /* console.log("cantTotal: ", cantTotal);
-  console.log("compra", compra);
-  console.log("cart", cart.cart); */
+  console.log("compra", compra); */
+  console.log("cart", cart.cart);
   
   const [formulario, setformulario] = useState({
       buyer: {
@@ -20,8 +24,8 @@ const Formulario = ({cantTotal, compra, cart}) => {
           apellido: "",
           telefono: "",
       },
-     /*  total: cantTotal.cartTotal,
-      items: compra.cantidadTotal, */
+      total: cantTotal.cartTotal,
+      items: compra.cantidadTotal,
       purchase: {...cart.cart}
   });
   
@@ -34,6 +38,9 @@ const Formulario = ({cantTotal, compra, cart}) => {
               ...formulario.buyer,
               [name]: value,
           },
+          /* LAS DOS SIGUIENTES AGREGADAS */
+          total: cartTotal,
+          items: cantidadTotal
       });
       console.log(formulario)
   };

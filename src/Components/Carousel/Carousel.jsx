@@ -16,7 +16,7 @@ const Carousel = () => {
                 <div className="container">
                     <div className="row p-5">
                         <div className="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img className="img-fluid" src="./assets/img/nuevas/item-camembert2.jpg" alt=""/>
+                            <img className="img-fluid" src="./assets/img/nuevas/carouselN2.png" alt=""/>
                         </div>
                         <div className="col-lg-6 mb-0 d-flex align-items-center">
                             <div className="text-align-left align-self-center">
@@ -33,7 +33,7 @@ const Carousel = () => {
                 <div className="container">
                     <div className="row p-5">
                         <div className="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img className="img-fluid" src="./assets/img/banner_img_02.jpg" alt=""/>
+                            <img className="img-fluid" src="./assets/img/nuevas/carouselN3-2.png" alt=""/>
                         </div>
                         <div className="col-lg-6 mb-0 d-flex align-items-center">
                             <div className="text-align-left">
@@ -52,7 +52,7 @@ const Carousel = () => {
                 <div className="container">
                     <div className="row p-5">
                         <div className="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img className="img-fluid" src="./assets/img/banner_img_03.jpg" alt=""/>
+                            <img className="img-fluid" src="./assets/img/nuevas/carouselN1.png" alt=""/>
                         </div>
                         <div className="col-lg-6 mb-0 d-flex align-items-center">
                             <div className="text-align-left">

@@ -45,11 +45,11 @@ const Footer = () => {
                 <div className="col-md-4 pt-5">
                     <h2 className="h2 text-light border-bottom pb-3 border-light">Otra Info</h2>
                     <ul className="list-unstyled text-light footer-link-list">
-                        <li><a className="text-decoration-none" href="#">Home</a></li>
-                        <li><a className="text-decoration-none" href="#">Nosotros</a></li>
+                        <li><NavLink to={"/"} className="text-decoration-none" href="#">Home</NavLink></li>
+                        <li><NavLink to={"/Nosotros"} className="text-decoration-none" href="#">Nosotros</NavLink></li>
                         {/* <li><a className="text-decoration-none" href="#"></a></li>
                         <li><a className="text-decoration-none" href="#">FAQs</a></li> */}
-                        <li><a className="text-decoration-none" href="#">Contact</a></li>
+                        <li><NavLink to={"/Contact"} className="text-decoration-none" href="#">Contacto</NavLink></li>
                     </ul>
                 </div>
 
@@ -75,17 +75,17 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="col-auto">
+                {/* <div className="col-auto">
                     <label className="sr-only" for="subscribeEmail">Email address</label>
                     <div className="input-group mb-2">
                         <input type="text" className="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address"/>
                         <div className="input-group-text btn-success text-light">Subscribe</div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
 
-        <div className="w-100 bg-black py-3">
+        {/* <div className="w-100 bg-black py-3">
             <div className="container">
                 <div className="row pt-2">
                     <div className="col-12">
@@ -96,7 +96,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */}
 
     </footer>
     </>

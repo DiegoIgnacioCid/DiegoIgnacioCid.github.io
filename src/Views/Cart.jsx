@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import CartItemList from '../Components/CartItemList/CartItemList';
 import Formulario from '../Components/Formulario/Formulario';
 import GlobalContextProvider, { GlobalContext } from '../Context/GlobalContextProvider';
+import "./Cart.css"
 
 
 const Cart = () => {
@@ -14,15 +15,13 @@ const Cart = () => {
     <>
     
     {/* <!-- Page Header Start --> */}
-    <div className="container-fluid bg-secondary mb-5">
-        <div className="d-flex flex-column align-items-center justify-content-center" style={{minHeight: "300px"}}>
-            <h1 className="font-weight-semi-bold text-uppercase mb-3">Shopping Cart</h1>
-            <div className="d-inline-flex">
-                <p className="m-0"><a href="">Home</a></p>
-                <p className="m-0 px-2">-</p>
-                <p className="m-0">Shopping Cart</p>
-                <p className="m-0">Shopping Cart</p>
-            </div>
+    
+    <div className="container-fluid bg-light py-5">
+        <div className="col-md-6 m-auto text-center">
+            <h1 className="h1">Cart</h1>
+            <p>
+                Lo que se hace por queso, acontece siempre más allá del bien y del mal.
+            </p>
         </div>
     </div>
     {/* <!-- Page Header End --> */}
@@ -33,7 +32,7 @@ const Cart = () => {
         <div className="row px-xl-5">
             <div className="col-lg-8 table-responsive mb-5">
                 <table className="table table-bordered text-center mb-0">
-                    <thead className="bg-secondary text-dark">
+                    <thead className="bg-primary text-dark head">
                         <tr>
                             <th>Quesos</th>
                             <th>Precio</th>
@@ -59,7 +58,7 @@ const Cart = () => {
                     </div>
                 </form> */}
                 <div className="card border-secondary mb-5">
-                    <div className="card-header bg-secondary border-0">
+                    <div className="card-header bg-secondary border-0 head">
                         <h4 className="font-weight-semi-bold m-0">Mi Carrito:</h4>
                     </div>
                     <div className="card-body">

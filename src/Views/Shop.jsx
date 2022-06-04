@@ -109,7 +109,7 @@ const Shop = () => {
 
 
                 </div>
-                <div div="row">
+                {/* <div div="row">
                     <ul className="pagination pagination-lg justify-content-end">
                         <li className="page-item disabled">
                             <a className="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#" tabindex="-1">1</a>
@@ -121,7 +121,7 @@ const Shop = () => {
                             <a className="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="#">3</a>
                         </li>
                     </ul>
-                </div>
+                </div> */}
 
 
 

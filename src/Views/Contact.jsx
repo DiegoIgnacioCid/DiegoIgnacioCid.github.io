@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Cart.css"
 
 const Contact = () => {
   return (
@@ -63,7 +64,7 @@ const Contact = () => {
                 </div>
                 <div className="row">
                     <div className="col text-end mt-2">
-                        <button type="submit" className="btn btn-success btn-lg px-3">Mande!</button>
+                        <button type="submit" className="btn btn-success btn-lg px-3 head">Mande!</button>
                     </div>
                 </div>
             </form>

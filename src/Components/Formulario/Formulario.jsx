@@ -118,7 +118,7 @@ const onSubmit = (e) => {
     {/* <input type="checkbox" className="form-check-input" id="exampleCheck1"/> */}
     {/* <label className="form-check-label" for="exampleCheck1">Confirmar compra</label> */}
   </div>
-  <button onClick={onSubmit} type="submit" className="btn btn-primary">Confirmar compra</button>
+  <button onClick={onSubmit} type="submit" className="btn btn-primary head">Confirmar compra</button>
 </form>
 </>
 

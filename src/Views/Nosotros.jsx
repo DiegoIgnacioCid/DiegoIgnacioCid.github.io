@@ -1,4 +1,5 @@
 import React from 'react'
+import img from "../Assets/img/nuevas/cheese-svgrepo-com.svg"
 
 const Nosotros = () => {
   return (
@@ -26,7 +27,7 @@ const Nosotros = () => {
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <img src="assets/img/about-hero.svg" alt="About Hero"/>
+                    <img src={img} alt="About Hero"/>
                 </div>
             </div>
         </div>

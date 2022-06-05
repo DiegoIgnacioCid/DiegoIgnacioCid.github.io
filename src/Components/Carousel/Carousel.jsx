@@ -24,7 +24,7 @@ const Carousel = () => {
                         </div>
                         <div className="col-lg-6 mb-0 d-flex align-items-center">
                             <div className="text-align-left align-self-center">
-                                <h1 className="h1 text-success kase"><b>Käse</b> tienda de quesos</h1>
+                                <h1 className="h1 text-warning kase"><b>Käse</b> tienda de quesos</h1>
                                 <h3 className="h2">Somos productores y curadores de quesos argentinos e importados.</h3>
                                 <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro fugiat animi tempore provident soluta aperiam similique minima assumenda voluptatem facilis repellat blanditiis, iste architecto dolor sint voluptates perferendis, consequatur corporis!
                                 </p>
@@ -44,8 +44,7 @@ const Carousel = () => {
                                 <h1 className="h1">Proident occaecat</h1>
                                 <h3 className="h2">Aliquip ex ea commodo consequat</h3>
                                 <p>
-                                    You are permitted to use this Zay CSS template for your commercial websites. 
-                                    You are <strong>not permitted</strong> to re-distribute the template ZIP file in any kind of template collection websites.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit aliquam labore consectetur autem, fugiat quam quibusdam. Quibusdam deserunt esse suscipit optio temporibus amet. Provident modi ullam facilis error excepturi molestiae?
                                 </p>
                             </div>
                         </div>
@@ -63,8 +62,7 @@ const Carousel = () => {
                                 <h1 className="h1">Repr in voluptate</h1>
                                 <h3 className="h2">Ullamco laboris nisi ut </h3>
                                 <p>
-                                    We bring you 100% free CSS templates for your websites. 
-                                    If you wish to support TemplateMo, please make a small contribution via PayPal or tell your friends about our website. Thank you.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores doloremque aperiam assumenda reprehenderit laboriosam reiciendis officiis? Voluptatem vero eveniet consequatur totam aspernatur at consectetur eum ad, quas nobis assumenda aut?
                                 </p>
                             </div>
                         </div>

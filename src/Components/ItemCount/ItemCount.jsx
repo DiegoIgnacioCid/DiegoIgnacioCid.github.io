@@ -72,9 +72,9 @@ const ItemCount = ({prod}) => {
                     Cantidad
                     {/* <input type="hidden" name="product-quanity" id="product-quanity" value="1"/> */}
                 </li>
-                <li className="list-inline-item"><button className="btn btn-success"  disabled={disable} onClick={restar}>-</button></li>
-                <li className="list-inline-item"><span className="badge bg-secondary">{contador}</span></li>
-                <li className="list-inline-item"><button className="btn btn-success"  disabled={disable} onClick={sumar}>+</button></li>
+                <li className="list-inline-item"><button className="btn btn-warning"  disabled={disable} onClick={restar}>-</button></li>
+                <li className="list-inline-item"><span className="badge bg-warning">{contador}</span></li>
+                <li className="list-inline-item"><button className="btn btn-warning"  disabled={disable} onClick={sumar}>+</button></li>
             </ul>
         </div>
     </div>
@@ -82,11 +82,11 @@ const ItemCount = ({prod}) => {
     <div className="row pb-3">
         <div className="col d-grid">
             <NavLink to={"/Cart"} className="navbar-brand nav-link">
-                <button type="submit" className="btn btn-success btn-lg" name="submit" value="buy">Terminar compra.</button>
+                <button type="submit" className="btn btn-warning btn-lg" name="submit" value="buy">Terminar compra.</button>
             </NavLink>
         </div>
         <div className="col d-grid">
-            <button type="submit" className="btn btn-success btn-lg" name="submit" value="addtocard" disabled={disable} onClick={handleAgregarCarrito}>Agregar al carrito</button>
+            <button type="submit" className="btn btn-warning btn-lg" name="submit" value="addtocard" disabled={disable} onClick={handleAgregarCarrito}>Agregar al carrito</button>
         </div>
     </div>
 

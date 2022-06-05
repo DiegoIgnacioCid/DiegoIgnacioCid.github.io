@@ -1,5 +1,8 @@
-HICE GIT REMOTE
-no paso nada si jhay problemas ver para que era ese comando
+Proyecto final para curso de React - Coderhaus.
+
+Kase, tienda online de quesos.
+
+E-Commerce desarrollado en ReactJS utilizando Firebase - Firestore.
 
 
 

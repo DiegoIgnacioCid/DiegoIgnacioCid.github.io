@@ -25,17 +25,17 @@ const Categories = () => {
             <div className="col-12 col-md-4 p-5 mt-3">
                 <NavLink to={"/Categoria/Estacionados"}><img src={img1} className="rounded-circle img-fluid border"/></NavLink>
                 <h5 className="text-center mt-3 mb-3">Estacionados</h5>
-                <p className="text-center"><NavLink to={"/Categoria/Estacionados"} className="btn btn-success head">Tienda</NavLink></p>
+                <p className="text-center"><NavLink to={"/Categoria/Estacionados"} className="btn btn-warning head">Tienda</NavLink></p>
             </div>
             <div className="col-12 col-md-4 p-5 mt-3">
                 <NavLink to={"/Categoria/Semiduros"}><img src={img2} className="rounded-circle img-fluid border"/></NavLink>
                 <h2 className="h5 text-center mt-3 mb-3">Semiduros</h2>
-                <p className="text-center"><NavLink to={"/Categoria/Semiduros"} className="btn btn-success head">Tienda</NavLink></p>
+                <p className="text-center"><NavLink to={"/Categoria/Semiduros"} className="btn btn-warning head">Tienda</NavLink></p>
             </div>
             <div className="col-12 col-md-4 p-5 mt-3">
                 <a href="#"><img src={img3} className="rounded-circle img-fluid border"/></a>
                 <h2 className="h5 text-center mt-3 mb-3">Blandos</h2>
-                <p className="text-center"><NavLink to={"/Categoria/Blandos"} className="btn btn-success head">Tienda</NavLink></p>
+                <p className="text-center"><NavLink to={"/Categoria/Blandos"} className="btn btn-warning head">Tienda</NavLink></p>
             </div>
         </div>
     </section>

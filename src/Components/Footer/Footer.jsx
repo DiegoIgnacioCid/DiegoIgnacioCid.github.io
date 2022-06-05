@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="row">
 
                 <div className="col-md-4 pt-5">
-                    <h2 className="h2 text-success border-bottom pb-3 border-light logo kaseColor">Käse</h2>
+                    <h2 className="h2 text-warning border-bottom pb-3 border-light logo kaseColor">Käse</h2>
                     <ul className="list-unstyled text-light footer-link-list">
                         <li>
                             <i className="fas fa-map-marker-alt fa-fw"></i>
@@ -20,7 +20,7 @@ const Footer = () => {
                         </li>
                         <li>
                             <i className="fa fa-phone fa-fw"></i>
-                            <a className="text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                            <a className="text-decoration-none" href="tel:010-020-0340">0800-QUESO</a>
                         </li>
                         <li>
                             <i className="fa fa-envelope fa-fw"></i>

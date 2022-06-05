@@ -32,7 +32,7 @@ const Cart = () => {
         <div className="row px-xl-5">
             <div className="col-lg-8 table-responsive mb-5">
                 <table className="table table-bordered text-center mb-0">
-                    <thead className="bg-primary text-dark head">
+                    <thead className="bg-warning text-dark head" style={{backgroundColor: "#f3d06b !important;"}}>
                         <tr>
                             <th>Quesos</th>
                             <th>Precio</th>
@@ -58,7 +58,7 @@ const Cart = () => {
                     </div>
                 </form> */}
                 <div className="card border-secondary mb-5">
-                    <div className="card-header bg-secondary border-0 head">
+                    <div className="card-header bg-warning border-0 head">
                         <h4 className="font-weight-semi-bold m-0">Mi Carrito:</h4>
                     </div>
                     <div className="card-body">

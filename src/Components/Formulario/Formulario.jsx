@@ -15,7 +15,7 @@ const Formulario = ({cantTotal, compra, cart}) => {
   /* console.log(cantTotal, compra); */
   /* console.log("cantTotal: ", cantTotal);
   console.log("compra", compra); */
-  console.log("cart", cart.cart);
+ /*  console.log("cart", cart.cart); */
   
   const [formulario, setformulario] = useState({
       buyer: {
@@ -42,7 +42,7 @@ const Formulario = ({cantTotal, compra, cart}) => {
           total: cartTotal,
           items: cantidadTotal
       });
-      console.log(formulario)
+      /* console.log(formulario) */
   };
   
   const {buyer: {email, nombre, apellido, telefono},} = formulario;
@@ -72,7 +72,7 @@ const Formulario = ({cantTotal, compra, cart}) => {
     try {
         const col = collection(db, "ordenes")
         /* console.log(col) */
-        console.log("datos", datos)
+        /* console.log("datos", datos) */
         const order = await addDoc(col, datos)
         /* console.log(order.id)
         console.log("datos", datos) */

@@ -21,7 +21,8 @@ const Item = (data) => {
                             <div className="card-body">
                                 <Link to={`/ShopDetail/${data.prods.id}`} className="h3 text-decoration-none">{data.prods.id}</Link>
                                 <ul className="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                    <li>{data.prods.Text}</li>
+                                   {/*  <li>{data.prods.Text}</li> */}
+                                    <Link to={`/ShopDetail/${data.prods.id}`} className="h3 text-decoration-none"><li>Ir al producto</li></Link>
                                     <li className="pt-2">
                                        
                                     </li>

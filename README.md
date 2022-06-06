@@ -49,5 +49,5 @@ Demo published in the following [Link](https://diegoignaciocid.github.io/).
 
 * When clicking on a product, a product detail is displayed. There, the user can choose quantity and add to the cart.
 * If the user chooses a product that he/she already added to the Cart, the amount will start at the already added quantity. 
-* Theres is no way of adding a quantity superior to the product's stock.
+* There's is no way of adding a quantity superior to the product's stock.
 * Within Cart, the user can modify the product's quantity, or elimitate the product from the cart. Such actions will impact global states (quantity, total price). 

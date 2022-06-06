@@ -1,80 +1,53 @@
-Proyecto final para curso de React - Coderhaus.
+# Kase, tienda online de quesos.
 
-Kase, tienda online de quesos.
-
-E-Commerce desarrollado en ReactJS utilizando Firebase - Firestore.
+(See below for English version).
 
 
+## E-Commerce desarrollado en ReactJS utilizando Firebase - Firestore.
+
+Demo publicada en el siguiente [Link](https://diegoignaciocid.github.io/).
 
 
 
-# Getting Started with Create React App
+## Algunas características del proyecto:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* Sitio basado en template de Bootstrap (ver [original](https://technext.github.io/zay-shop/)).  
+* Los datos e imágenes de los productos se toman de base de datos en Firebase / Firestore.
+* Las órdenes de compra del Cart y mensaje del formulario de contacto se alojan en base de datos en Firebase / Firestore.
+* El Home renderiza un Carousel, Ofertas del Mes y Categorias. 
+>Ofertas del Mes renderiza productos que en su objeto de características tienen el valor True para el campo Oferta.
+>Categorías lleva a la tienda filtrando la categoría elegida.
+* La Tienda recibe los productos desde Firebase / Firestore. Al filtrar por categorías, el pedido a la base de datos se hace con el filtro seleccionado.
 
-## Available Scripts
+## Uso del sitio.
 
-In the project directory, you can run:
+* Al hacer click en el producto se va al detalle de producto. Allí, se puede elegir cantidad y agregar al carrito.
+* Si en la Tienda vemos un producto ya agregado al carrito, al ir al detalle mostrará la cantidad ya elegida antes.
+* En ningún caso se permite agregar al carrito cantidad que supere el stock del producto.
+* En el carrito de compras se puede alterar la cantidad del producto elegido o eliminar producto, y eso impacta en estados globales (cantidad, precio total).  
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## English version:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## E-Commerce developed in ReactJS using Firebase - Firestore as database.
 
-### `npm test`
+Demo published in the following [Link](https://diegoignaciocid.github.io/).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Some  bullets about the project:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Site based in Bootstrap template (see [original](https://technext.github.io/zay-shop/)). 
+* Product data and images are fetched from Firebase / Firestore databases.
+* Cart orders and contact form messages are stored in Firebase / Firestore databases.
+* Home page reders a Carousel, Montly Offers and Categories.
+>Monthly Offers renders products that contain a "true" value in their "Offer" key.
+>Categories leads to Shop filtering by the chosen category.
+* Shop receives product data from Firebase / Firestore. When filtering by category, data is requested to the databases with the given filters.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Site usage.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* When clicking on a product, a product detail is displayed. There, the user can choose quantity and add to the cart.
+* If the user chooses a product that he/she already added to the Cart, the amount will start at the already added quantity. 
+* Theres is no way of adding a quantity superior to the product's stock.
+* Within Cart, the user can modify the product's quantity, or elimitate the product from the cart. Such actions will impact global states (quantity, total price). 

@@ -15,8 +15,8 @@ Demo publicada en el siguiente [Link](https://diegoignaciocid.github.io/).
 * Los datos e imágenes de los productos se toman de base de datos en Firebase / Firestore.
 * Las órdenes de compra del Cart y mensaje del formulario de contacto se alojan en base de datos en Firebase / Firestore.
 * El Home renderiza un Carousel, Ofertas del Mes y Categorias. 
->Ofertas del Mes renderiza productos que en su objeto de características tienen el valor True para el campo Oferta.
->Categorías lleva a la tienda filtrando la categoría elegida.
+* Ofertas del Mes renderiza productos que en su objeto de características tienen el valor True para el campo Oferta.
+* Categorías lleva a la tienda filtrando la categoría elegida.
 * La Tienda recibe los productos desde Firebase / Firestore. Al filtrar por categorías, el pedido a la base de datos se hace con el filtro seleccionado.
 
 ## Uso del sitio.
@@ -41,8 +41,8 @@ Demo published in the following [Link](https://diegoignaciocid.github.io/).
 * Product data and images are fetched from Firebase / Firestore databases.
 * Cart orders and contact form messages are stored in Firebase / Firestore databases.
 * Home page reders a Carousel, Montly Offers and Categories.
->Monthly Offers renders products that contain a "true" value in their "Offer" key.
->Categories leads to Shop filtering by the chosen category.
+* Monthly Offers renders products that contain a "true" value in their "Offer" key.
+* Categories leads to Shop filtering by the chosen category.
 * Shop receives product data from Firebase / Firestore. When filtering by category, data is requested to the databases with the given filters.
 
 ## Site usage.

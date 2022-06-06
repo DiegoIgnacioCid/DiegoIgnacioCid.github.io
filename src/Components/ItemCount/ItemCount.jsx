@@ -16,6 +16,8 @@ const ItemCount = ({prod}) => {
      
     let contInicial = 0; 
 
+
+    /* Esto es para que el contador tome el valor del item en el carro si es que ya hay, para que respete tope de stock */
     if (isInCart(prod.id) == -1) {
         contInicial = 0; 
 
@@ -70,7 +72,6 @@ const ItemCount = ({prod}) => {
             <ul className="list-inline pb-3">
                 <li className="list-inline-item text-right">
                     Cantidad
-                    {/* <input type="hidden" name="product-quanity" id="product-quanity" value="1"/> */}
                 </li>
                 <li className="list-inline-item"><button className="btn btn-warning"  disabled={disable} onClick={restar}>-</button></li>
                 <li className="list-inline-item"><span className="badge bg-warning">{contador}</span></li>
@@ -90,19 +91,6 @@ const ItemCount = ({prod}) => {
         </div>
     </div>
 
-
-
-    {/* <p>Stock actual: {stock}</p> */}
-   {/*  <div>
-        <button className="btn btn-success my-4" disabled={disable} onClick={restar}> - </button>
-        <span className='span'>{contador}</span>
-        <button className="btn btn-success my-4" disabled={disable} onClick={sumar}> + </button>
-        <br />
-        <button className="btn btn-success my-4" disabled={disable} onClick={handleAgregarCarrito}>Agregar al carrito.</button>
-        <NavLink to={"/Cart"} className="navbar-brand nav-link">
-        <button className="btn btn-success my-4">Terminar mi compra.</button>
-        </NavLink>
-    </div> */}
     </>
     )
 }

@@ -32,9 +32,6 @@ const GlobalContextProvider = ({children}) => {
   const eliminarProd = (producto) => {
     let copiaArray = cart;
     const indexProd = copiaArray.findIndex(x => x.id === producto);
-    /* console.log("cart", cart); */
-    /* cart.map(x => console.log(x)); */
-    /* console.log("producto", producto);*/
     console.log("indexprod", indexProd);
     console.log("copiaArray", copiaArray); 
     copiaArray.splice(indexProd, 1);
@@ -45,25 +42,22 @@ const GlobalContextProvider = ({children}) => {
     contadorCantTotal();
  }
 
-  
+  /* Cuando cambie "cart", se disparan las funciones que cuentan los items y valores en el cart */
   useEffect(() => {
     contadorTotal(); 
     contadorCantTotal();
-    /* console.log("Cambio contador total o cantidad total. Usado el UseEffect del CartContext")
-    console.log("Nuevo cart: ", cart); */
     
   }, [cart])
   
   // las funciones pedidas en la consigna.
   
+  /* Detecta si el producto ya esta en el carrito, en ese caso pasa indica. Caso contrario pasa -1 */
   const isInCart = (producto) => {
-    /* console.log("producto: ", producto, "cart; ", cart); */
-    return cart.findIndex(x => x.id === producto) /* ? console.log("estaba") : console.log("no estaba"); */
-   /* cart.map(x => console.log(x)); */
+    return cart.findIndex(x => x.id === producto) 
  }
  
  
-
+/* Funci[on que agrega contenido al carrito. Si el producto no estaba, crea el objeto, lo puebla con lso datos y lo agrega. Si ya estaba, actualiza cantidad y precio] */
   const addToCart= (producto, cantidad, precio, stock) => {
       console.log("producto en GlobalContext: ", producto);
       if (isInCart(producto) == -1) {
@@ -74,9 +68,7 @@ const GlobalContextProvider = ({children}) => {
           precio: precio, 
           precioTotal: (precio * cantidad)
         }
-        console.log(nuevoObj);
         setCart([... cart, nuevoObj]); 
-        console.log("Nuevo estado del carrito (if):", cart);
 
       } else {
         const cantNueva = cart[isInCart(producto)].cantidad + cantidad;
@@ -84,9 +76,7 @@ const GlobalContextProvider = ({children}) => {
         const newArray = [...cart];
         newArray[isInCart(producto)].cantidad = cantNueva;
         newArray[isInCart(producto)].precioTotal = precioTotNuevo;
-        /* console.log(newArray); */
         setCart(newArray); 
-        /* console.log("Nuevo estado del carrito (else):", cart); */
 
       }
   }
@@ -108,7 +98,6 @@ const [dataProds, setdataProds] = useState([]);
         const data = await getDocs(col)
         const result = data.docs.map(doc => doc = {id: doc.id, ...doc.data()})
         setdataProds(result)
-        console.log(result)
       } catch (error) {
         console.log(error)
       }

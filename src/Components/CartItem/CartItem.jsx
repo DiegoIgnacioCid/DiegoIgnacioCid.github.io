@@ -9,8 +9,6 @@ const CartItem = (data) => {
     
     
     data = data.prods;
-    /* console.log("data en cartItem: ", data)
-    console.log("data.id en cartItem: ", data.id) */
 
 const handleClick = () => {
     eliminarProd(data.id);

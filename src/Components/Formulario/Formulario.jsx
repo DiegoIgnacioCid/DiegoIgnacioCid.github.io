@@ -12,10 +12,6 @@ const Formulario = ({cantTotal, compra, cart}) => {
 
   const {cartTotal, cantidadTotal} = useContext(GlobalContext);
   
-  /* console.log(cantTotal, compra); */
-  /* console.log("cantTotal: ", cantTotal);
-  console.log("compra", compra); */
- /*  console.log("cart", cart.cart); */
   
   const [formulario, setformulario] = useState({
       buyer: {
@@ -29,6 +25,9 @@ const Formulario = ({cantTotal, compra, cart}) => {
       purchase: {...cart.cart}
   });
   
+
+/* Completa el formulario con los datos ingresados en los campos */
+
   const handleChange = (e) => {
       const {name, value} = e.target;
       console.log(e.target);
@@ -47,6 +46,7 @@ const Formulario = ({cantTotal, compra, cart}) => {
   
   const {buyer: {email, nombre, apellido, telefono},} = formulario;
   
+  /* Alarmas para el caso de exito o problema en la compra */
   const compraAlarm = () => {
     Swal.fire({
       position: 'top-end',
@@ -71,12 +71,9 @@ const Formulario = ({cantTotal, compra, cart}) => {
   const fetchGenerateTicket = async ({datos}) => {
     try {
         const col = collection(db, "ordenes")
-        /* console.log(col) */
-        /* console.log("datos", datos) */
         const order = await addDoc(col, datos)
-        /* console.log(order.id)
-        console.log("datos", datos) */
         compraAlarm();
+        /* document.location.reload(true); */
     } catch (error) {
         console.log("error", error);
         errAlarm();
@@ -98,27 +95,20 @@ const onSubmit = (e) => {
 <>
 <form id='formulario'>
   <div className="form-group">
-    {/* <label for="exampleInputEmail1">Email address</label> */}
     <input name='email' value={email} type="email" onChange={handleChange} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresá tu email"/>
-    {/* <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small> */}
   </div>
   <div className="form-group">
-    {/* <label for="nombre">Ingres[a</label> */}
     <input name='nombre' value={nombre} type="text" onChange={handleChange} className="form-control" id="exampleInputPassword1" placeholder="Ingresá tu nombre"/>
   </div>
   <div className="form-group">
-    {/* <label for="exampleInputPassword1">Password</label> */}
     <input name='apellido' value={apellido} type="text" onChange={handleChange} className="form-control" id="exampleInputPassword1" placeholder="Ingresá tu apellido"/>
   </div>
   <div className="form-group">
-    {/* <label for="exampleInputPassword1">Password</label> */}
     <input name='telefono' value={telefono} type="text" onChange={handleChange} className="form-control" id="exampleInputPassword1" placeholder="Ingresá tu teléfono"/>
   </div>
   <div className="form-check">
-    {/* <input type="checkbox" className="form-check-input" id="exampleCheck1"/> */}
-    {/* <label className="form-check-label" for="exampleCheck1">Confirmar compra</label> */}
   </div>
-  <button onClick={onSubmit} type="submit" className="btn btn-primary head">Confirmar compra</button>
+  <button onClick={onSubmit} type="submit" className="btn btn-warning">Confirmar compra</button>
 </form>
 </>
 

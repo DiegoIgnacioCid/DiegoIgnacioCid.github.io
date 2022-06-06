@@ -49,14 +49,6 @@ const Cart = () => {
                 </table>
             </div>
             <div className="col-lg-4">
-                {/* <form className="mb-5" action="">
-                    <div className="input-group">
-                        <input type="text" className="form-control p-4" placeholder="Coupon Code"/>
-                        <div className="input-group-append">
-                            <button className="btn btn-primary">Apply Coupon</button>
-                        </div>
-                    </div>
-                </form> */}
                 <div className="card border-secondary mb-5">
                     <div className="card-header bg-warning border-0 head">
                         <h4 className="font-weight-semi-bold m-0">Mi Carrito:</h4>
@@ -81,7 +73,6 @@ const Cart = () => {
                             <h5 className="font-weight-bold">$ {cartTotal}.-</h5>
                         </div>
                         <Formulario cart={{cart}} cantTotal={{cartTotal}} compra={{cantidadTotal}}/>
-                       {/*  <button className="btn btn-block btn-primary my-3 py-3">Terminar mi compra</button> */}
                     </div>
                 </div>
             </div>

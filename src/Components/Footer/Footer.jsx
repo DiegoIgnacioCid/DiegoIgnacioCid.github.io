@@ -35,10 +35,6 @@ const Footer = () => {
                         <li><NavLink to={"/Categoria/Estacionados"}  className="text-decoration-none" href="#">Estacionados</NavLink></li>
                         <li><NavLink to={"/Categoria/Semiduros"}  className="text-decoration-none" href="#">Semiduros</NavLink></li>
                         <li><NavLink to={"/Categoria/Blandos"}  className="text-decoration-none" href="#">Blandos</NavLink></li>
-                        {/* <li><a className="text-decoration-none" href="#">Women's Shoes</a></li>
-                        <li><a className="text-decoration-none" href="#">Popular Dress</a></li>
-                        <li><a className="text-decoration-none" href="#">Gym Accessories</a></li>
-                        <li><a className="text-decoration-none" href="#">Sport Shoes</a></li> */}
                     </ul>
                 </div>
 
@@ -47,8 +43,6 @@ const Footer = () => {
                     <ul className="list-unstyled text-light footer-link-list">
                         <li><NavLink to={"/"} className="text-decoration-none" href="#">Home</NavLink></li>
                         <li><NavLink to={"/Nosotros"} className="text-decoration-none" href="#">Nosotros</NavLink></li>
-                        {/* <li><a className="text-decoration-none" href="#"></a></li>
-                        <li><a className="text-decoration-none" href="#">FAQs</a></li> */}
                         <li><NavLink to={"/Contact"} className="text-decoration-none" href="#">Contacto</NavLink></li>
                     </ul>
                 </div>
@@ -75,28 +69,9 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                {/* <div className="col-auto">
-                    <label className="sr-only" for="subscribeEmail">Email address</label>
-                    <div className="input-group mb-2">
-                        <input type="text" className="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address"/>
-                        <div className="input-group-text btn-success text-light">Subscribe</div>
-                    </div>
-                </div> */}
             </div>
         </div>
 
-        {/* <div className="w-100 bg-black py-3">
-            <div className="container">
-                <div className="row pt-2">
-                    <div className="col-12">
-                        <p className="text-left text-light">
-                            Copyright &copy; 2021 Company Name 
-                            | Designed by <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div> */}
 
     </footer>
     </>

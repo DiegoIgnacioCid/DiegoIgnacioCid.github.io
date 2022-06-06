@@ -26,10 +26,6 @@ const Rutas = () => {
                   <Route path="/Cart" element={<Cart/>}/>
                   <Route path="/ShopDetail/:id" element={<ShopDetail/>}/>
                   <Route path="*" element={<Error/>}/>
-                    {/*  <Route index element={<Home/>}/>
-                     <Route path="*" element={<Error/>}/>
-                     
-                     */}
                   
             </Route>
 

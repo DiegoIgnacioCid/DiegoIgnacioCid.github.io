@@ -4,16 +4,6 @@ import img from "../Assets/img/nuevas/cheese-svgrepo-com.svg"
 const Nosotros = () => {
   return (
     <>
-      {/* <div className="container-fluid bg-light py-5">
-        <div className="col-md-6 m-auto text-center">
-            <h1 className="h1">Nosotros</h1>
-            <p>
-                Lo que se hace por queso, acontece siempre más allá del bien y del mal. 
-            </p>
-        </div>
-    </div> */}
-    
-
 
     <section class="bg-success py-5">
         <div class="container">

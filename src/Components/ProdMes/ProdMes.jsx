@@ -19,7 +19,6 @@ const ProdMes = () => {
           console.log("no data")
         } else {
           setdataProds(snapshot.docs.map(doc => doc = {id: doc.id, ...doc.data()}));
-          console.log(snapshot);
         }
       })
       } catch (error) {

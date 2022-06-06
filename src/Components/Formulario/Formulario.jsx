@@ -30,7 +30,7 @@ const Formulario = ({cantTotal, compra, cart}) => {
 
   const handleChange = (e) => {
       const {name, value} = e.target;
-      console.log(e.target);
+      /* console.log(e.target); */
       setformulario({
           ...formulario,
           buyer: {
@@ -44,7 +44,7 @@ const Formulario = ({cantTotal, compra, cart}) => {
       /* console.log(formulario) */
   };
   
-  const {buyer: {email, nombre, apellido, telefono},} = formulario;
+  /* const {buyer: {email, nombre, apellido, telefono},} = formulario; */
   
   /* Alarmas para el caso de exito o problema en la compra */
   const compraAlarm = () => {
@@ -94,7 +94,15 @@ const onSubmit = (e) => {
     
 <>
 <form id='formulario'>
+
+  {/* Principio DRY: no repetir campos de input */}
+{Object.keys(formulario.buyer).map((key, index) => (
   <div className="form-group">
+  <input key={index} name={`${key}`} value={key.value} type="text" onChange={handleChange} className="form-control" placeholder={`${key}`}/>
+  </div>
+))}
+
+  {/* <div className="form-group">
     <input name='email' value={email} type="email" onChange={handleChange} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresá tu email"/>
   </div>
   <div className="form-group">
@@ -105,7 +113,7 @@ const onSubmit = (e) => {
   </div>
   <div className="form-group">
     <input name='telefono' value={telefono} type="text" onChange={handleChange} className="form-control" id="exampleInputPassword1" placeholder="Ingresá tu teléfono"/>
-  </div>
+  </div> */}
   <div className="form-check">
   </div>
   <button onClick={onSubmit} type="submit" className="btn btn-warning">Confirmar compra</button>

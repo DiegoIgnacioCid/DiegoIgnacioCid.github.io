@@ -1,7 +1,63 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Cart.css"
+/* import useFirebase from '../Hooks/useFirebase'; */
+import { addDoc, collection } from 'firebase/firestore'
+import Swal from 'sweetalert2'
+import db from '../Service/Firebase'
+
+
 
 const Contact = () => {
+    
+    const [formulario, setformulario] = useState({
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
+        });
+
+
+        const handleChange = (e) => {
+            const {name, value} = e.target;
+            setformulario({
+                ...formulario,
+                [name]: value
+            });
+            /* console.log(formulario) */
+        };
+
+    
+      /* FUNCION DE PRUEBA */
+      const fetchGenerateTicket = async ({datos}) => {
+        try {
+            const col = collection(db, "contacto")
+            const order = await addDoc(col, datos)
+            contactoAlarm();
+            /* document.location.reload(true); */
+        } catch (error) {
+            console.log("error", error);
+        }
+      }
+      
+    const onSubmit = (e) => {
+        e.preventDefault();
+        fetchGenerateTicket({datos: formulario})
+    }
+    
+    
+    
+    const contactoAlarm = () => {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Mensaje enviado!',
+          showConfirmButton: false,
+          timer: 1500
+        })
+      }
+
+
+
   return (
     <>
     
@@ -21,24 +77,24 @@ const Contact = () => {
                 <div className="row">
                     <div className="form-group col-md-6 mb-3">
                         <label for="inputname">Nombre</label>
-                        <input type="text" className="form-control mt-1" id="name" name="name" placeholder="Nombre"/>
+                        <input type="text" onChange={handleChange} className="form-control mt-1" id="name" name="name" placeholder="Nombre"/>
                     </div>
                     <div className="form-group col-md-6 mb-3">
                         <label for="inputemail">Email</label>
-                        <input type="email" className="form-control mt-1" id="email" name="email" placeholder="Email"/>
+                        <input type="email" onChange={handleChange} className="form-control mt-1" id="email" name="email" placeholder="Email"/>
                     </div>
                 </div>
                 <div className="mb-3">
                     <label for="inputsubject">Título</label>
-                    <input type="text" className="form-control mt-1" id="subject" name="subject" placeholder="Título"/>
+                    <input type="text" onChange={handleChange} className="form-control mt-1" id="subject" name="subject" placeholder="Título"/>
                 </div>
                 <div className="mb-3">
                     <label for="inputmessage">Comentario</label>
-                    <textarea className="form-control mt-1" id="message" name="message" placeholder="Comentario" rows="8"></textarea>
+                    <textarea onChange={handleChange} className="form-control mt-1" id="message" name="message" placeholder="Comentario" rows="8"></textarea>
                 </div>
                 <div className="row">
                     <div className="col text-end mt-2">
-                        <button type="submit" className="btn btn-warning btn-lg px-3 head">Mande!</button>
+                        <button onClick={onSubmit} type="submit" className="btn btn-warning btn-lg px-3 head">Mande!</button>
                     </div>
                 </div>
             </form>

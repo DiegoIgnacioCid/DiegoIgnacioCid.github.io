@@ -17,8 +17,6 @@ const handleClick = () => {
 
 const handleClickSuma = () => {
     if (data.cantidad < data.stock) {
-        console.log(cart);
-        console.log(cartTotal);
         addToCart(data.id, 1, data.precio, data.stock);
     }
     

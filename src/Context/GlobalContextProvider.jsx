@@ -59,7 +59,7 @@ const GlobalContextProvider = ({children}) => {
  
 /* Funci[on que agrega contenido al carrito. Si el producto no estaba, crea el objeto, lo puebla con lso datos y lo agrega. Si ya estaba, actualiza cantidad y precio] */
   const addToCart= (producto, cantidad, precio, stock) => {
-      console.log("producto en GlobalContext: ", producto);
+      
       if (isInCart(producto) == -1) {
         const nuevoObj = {
           id: producto,

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import useFirebase from '../../Hooks/useFirebase';
 import "./Formulario.css"
 import { addDoc, collection } from 'firebase/firestore'
@@ -29,6 +29,7 @@ const Formulario = ({cantTotal, compra, cart}) => {
 /* Completa el formulario con los datos ingresados en los campos */
 
   const handleChange = (e) => {
+    buttonState();
       const {name, value} = e.target;
       /* console.log(e.target); */
       setformulario({
@@ -52,8 +53,14 @@ const Formulario = ({cantTotal, compra, cart}) => {
       position: 'top-end',
       icon: 'success',
       title: 'Compra exitosa!',
-      showConfirmButton: false,
-      timer: 1500
+      html:
+      '<h4>Detalle de tu compra</h4>' +
+      '<p>Item</p>' +
+      '<p>Item</p>' +
+      '<p>Item</p>' +
+      '<p>Item</p>',
+      showConfirmButton: true,
+      /* timer: 1500 */
     })
   }
 
@@ -61,7 +68,7 @@ const Formulario = ({cantTotal, compra, cart}) => {
     Swal.fire({
       icon: 'error',
       title: 'Oops...',
-      text: 'Something went wrong!',
+      text: 'Algo no funcionó bien!',
       
     })
   }
@@ -83,12 +90,38 @@ const Formulario = ({cantTotal, compra, cart}) => {
 const onSubmit = (e) => {
     e.preventDefault();
     fetchGenerateTicket({datos: formulario})
+    const size = Object.keys(formulario.purchase).length;
+    console.log(size);
 }
 
-
-
-
+/* Dispara la funcion de verificacion cuando cambia el estado de cartTotal, para evitar que se vacie el carrito despúes de habilitado el boton de compra y permanezca activo */
+useEffect(() => {
+  buttonState();
   
+  
+}, [cartTotal])
+
+
+
+
+
+const [disable, setDisable] = useState(true);
+
+
+/* Funcion que habilita el boton de compra solo cuando todos los campos estén completos y el carrito con algo */
+const buttonState = () => {
+  const email = document.querySelector("input[name='email']");
+  const nombre = document.querySelector("input[name='nombre']");
+  const apellido = document.querySelector("input[name='apellido']");
+  const telefono = document.querySelector("input[name='telefono']");
+  
+  
+  if ((email.value.length != 0) && (nombre.value.length != 0) && (apellido.value.length != 0) && (telefono.value.length != 0) && (cartTotal > 0)) {
+    setDisable(false);
+  } else {
+    setDisable(true);
+  }
+}
   
     return (
     
@@ -116,7 +149,7 @@ const onSubmit = (e) => {
   </div> */}
   <div className="form-check">
   </div>
-  <button onClick={onSubmit} type="submit" className="btn btn-warning">Confirmar compra</button>
+  <button onClick={onSubmit} disabled={disable} type="submit" className="btn btn-warning">Confirmar compra</button>
 </form>
 </>
 

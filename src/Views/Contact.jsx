@@ -41,7 +41,14 @@ const Contact = () => {
       
     const onSubmit = (e) => {
         e.preventDefault();
-        fetchGenerateTicket({datos: formulario})
+        if (checkInputs()) {
+            if (ValidateEmail(document.querySelector("input[name='email']").value)){
+
+                fetchGenerateTicket({datos: formulario})
+            }
+        } else {
+            inputAlarm();
+        }
     }
     
     
@@ -56,6 +63,53 @@ const Contact = () => {
         })
       }
 
+      const mailAlarm = () => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Ingrese un correo electronico válido!',
+          
+        })
+      }
+      
+      const inputAlarm = () => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Complete todos los campos requeridos!',
+          
+        })
+      }
+
+
+      function ValidateEmail(mail) 
+      {
+       if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+        {
+          return (true)
+        } else {
+          mailAlarm();
+          return (false)
+      
+        }
+      }
+
+
+      /* Funcion que habilita el boton de compra solo cuando todos los campos estén completos y el carrito con algo */
+      const checkInputs = () => {
+        const email = document.querySelector("input[name='email']");
+        const nombre = document.querySelector("input[name='name']");
+        const subject = document.querySelector("input[name='subject']");
+        const message = document.querySelector("textarea[name='message']");
+        
+        console.log(message.value.length);
+        
+        if ((email.value.length != 0) && (nombre.value.length != 0) && (subject.value.length != 0) && (message.value.length != 0)) {
+          return(true);
+        } else {
+          return(false);
+        }
+      }
 
 
   return (

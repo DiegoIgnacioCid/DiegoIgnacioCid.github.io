@@ -4,8 +4,6 @@ import "./Formulario.css"
 import { addDoc, collection } from 'firebase/firestore'
 import Swal from 'sweetalert2'
 import GlobalContextProvider, { GlobalContext } from '../../Context/GlobalContextProvider';
-
-
 import db from '../../Service/Firebase'
 
 const Formulario = ({cantTotal, compra, cart}) => {
@@ -46,19 +44,28 @@ const Formulario = ({cantTotal, compra, cart}) => {
   };
   
   /* const {buyer: {email, nombre, apellido, telefono},} = formulario; */
+
+  const itemRender = () => {
+    const compra  = formulario.purchase;
+      return (
+        `${Object.entries(compra).map((prod) => `<p>${prod[1].cantidad} unidades de queso ${prod[1].id}. Valor: $ ${prod[1].precioTotal}</p>`)}` 
+      
+    )
+  }
   
   /* Alarmas para el caso de exito o problema en la compra */
+  
   const compraAlarm = () => {
     Swal.fire({
       position: 'top-end',
       icon: 'success',
       title: 'Compra exitosa!',
       html:
-      '<h4>Detalle de tu compra</h4>' +
-      '<p>Item</p>' +
-      '<p>Item</p>' +
-      '<p>Item</p>' +
-      '<p>Item</p>',
+      '<h4>Detalle de tu compra</h4>',
+      html: 
+      itemRender() +
+      
+      `<h4>Valor total: $ ${cartTotal}</h4>`,
       showConfirmButton: true,
       /* timer: 1500 */
     })
@@ -101,7 +108,7 @@ const onSubmit = (e) => {
     if (ValidateEmail(document.querySelector("input[name='email']").value)) {
       fetchGenerateTicket({datos: formulario})
       const size = Object.keys(formulario.purchase).length;
-      console.log("Mail correcto");
+      /* console.log("Mail correcto"); */
 
     }
 }

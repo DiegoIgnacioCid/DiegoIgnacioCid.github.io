@@ -55,17 +55,18 @@ const Formulario = ({cantTotal, compra, cart}) => {
   
   /* Alarmas para el caso de exito o problema en la compra */
   
-  const compraAlarm = () => {
+  const compraAlarm = (order) => {
     Swal.fire({
       position: 'top-end',
       icon: 'success',
       title: 'Compra exitosa!',
-      html:
-      '<h4>Detalle de tu compra</h4>',
+      
       html: 
+      `<h4>Detalle de tu compra:</h4>` +
       itemRender() +
       
-      `<h4>Valor total: $ ${cartTotal}</h4>`,
+      `<h4>Valor total: $ ${cartTotal}</h4>` +
+      `<h6>ID de la compra: ${order}</h6>`,
       showConfirmButton: true,
       /* timer: 1500 */
     })
@@ -95,7 +96,8 @@ const Formulario = ({cantTotal, compra, cart}) => {
     try {
         const col = collection(db, "ordenes")
         const order = await addDoc(col, datos)
-        compraAlarm();
+        compraAlarm(order.id);
+        /* console.log(order.id); */
         /* document.location.reload(true); */
     } catch (error) {
         console.log("error", error);

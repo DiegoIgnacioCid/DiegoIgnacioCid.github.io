@@ -73,6 +73,15 @@ const Formulario = ({cantTotal, compra, cart}) => {
     })
   }
   
+  const mailAlarm = () => {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Ingrese un correo electronico válido!',
+      
+    })
+  }
+  
 
   /* FUNCION DE PRUEBA */
   const fetchGenerateTicket = async ({datos}) => {
@@ -89,9 +98,12 @@ const Formulario = ({cantTotal, compra, cart}) => {
   
 const onSubmit = (e) => {
     e.preventDefault();
-    fetchGenerateTicket({datos: formulario})
-    const size = Object.keys(formulario.purchase).length;
-    console.log(size);
+    if (ValidateEmail(document.querySelector("input[name='email']").value)) {
+      fetchGenerateTicket({datos: formulario})
+      const size = Object.keys(formulario.purchase).length;
+      console.log("Mail correcto");
+
+    }
 }
 
 /* Dispara la funcion de verificacion cuando cambia el estado de cartTotal, para evitar que se vacie el carrito despúes de habilitado el boton de compra y permanezca activo */
@@ -102,7 +114,17 @@ useEffect(() => {
 }, [cartTotal])
 
 
+function ValidateEmail(mail) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+  {
+    return (true)
+  } else {
+    mailAlarm();
+    return (false)
 
+  }
+}
 
 
 const [disable, setDisable] = useState(true);

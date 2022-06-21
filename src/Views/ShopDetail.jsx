@@ -52,6 +52,12 @@ const ShopDetail = () => {
                                 <li className="list-inline-item">
                                     <p className="text-muted"><strong>A granel.</strong></p>
                                 </li>
+                                <li className="list-inline-item">
+                                    <h6>Stock:</h6>
+                                </li>
+                                <li className="list-inline-item">
+                                    <p className="text-muted"><strong>{prodElegidoF.Stock} unidades.</strong></p>
+                                </li>
                             </ul>
 
                             <h6>Características:</h6>

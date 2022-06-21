@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.499fbef0.css",
-    "main.js": "/static/js/main.2f1cf03d.js",
+    "main.js": "/static/js/main.93ddfe41.js",
     "static/js/787.3ac43629.chunk.js": "/static/js/787.3ac43629.chunk.js",
     "static/media/categorias-estacionado.png": "/static/media/categorias-estacionado.7f70bd41414ea2bb44a0.png",
     "static/media/categorias-semiduros.png": "/static/media/categorias-semiduros.cbc79935eb9339d0dbeb.png",
@@ -13,11 +13,11 @@
     "static/media/cheese-svgrepo-com.svg": "/static/media/cheese-svgrepo-com.41377498e06fbae9a967ad82376c7d17.svg",
     "index.html": "/index.html",
     "main.499fbef0.css.map": "/static/css/main.499fbef0.css.map",
-    "main.2f1cf03d.js.map": "/static/js/main.2f1cf03d.js.map",
+    "main.93ddfe41.js.map": "/static/js/main.93ddfe41.js.map",
     "787.3ac43629.chunk.js.map": "/static/js/787.3ac43629.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.499fbef0.css",
-    "static/js/main.2f1cf03d.js"
+    "static/js/main.93ddfe41.js"
   ]
 }

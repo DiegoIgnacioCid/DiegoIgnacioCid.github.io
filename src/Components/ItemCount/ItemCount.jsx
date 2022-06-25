@@ -19,7 +19,7 @@ const ItemCount = ({prod}) => {
 
     /* Esto es para que el contador tome el valor del item en el carro si es que ya hay, para que respete tope de stock */
     if (isInCart(prod.id) == -1) {
-        contInicial = 0; 
+        contInicial = 1; 
 
       } else {
         contInicial = cart[isInCart(prod.id)].cantidad;
@@ -51,7 +51,7 @@ const ItemCount = ({prod}) => {
     
     function restar() {
         
-        if (contador > 0) {
+        if (contador > 1) {
             setContador(contador - 1);
         }
     }
